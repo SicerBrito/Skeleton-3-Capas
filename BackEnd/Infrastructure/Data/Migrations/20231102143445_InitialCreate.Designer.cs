@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(DbAppContext))]
-    [Migration("20231006005340_InitialCreate")]
+    [Migration("20231102143445_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -102,19 +102,19 @@ namespace Infrastructure.Data.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(50)
+                        .HasMaxLength(200)
                         .HasColumnType("varchar")
                         .HasColumnName("Email");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasMaxLength(50)
+                        .HasMaxLength(255)
                         .HasColumnType("varchar")
                         .HasColumnName("Password");
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasMaxLength(50)
+                        .HasMaxLength(200)
                         .HasColumnType("varchar")
                         .HasColumnName("Username");
 
